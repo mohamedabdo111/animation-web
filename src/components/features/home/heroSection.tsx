@@ -1,11 +1,11 @@
-import DotGrid from "@/components/DotGrid";
+// import DotGrid from "@/components/DotGrid";
 import StarBorder from "@/components/StarBorder";
 import TextType from "@/components/TextType";
 
 export default function HeroSection() {
   return (
     <div style={{ width: "100%", height: "600px", position: "relative" }}>
-      <DotGrid
+      {/* <DotGrid
         dotSize={10}
         gap={15}
         baseColor="#5227FF"
@@ -15,7 +15,7 @@ export default function HeroSection() {
         shockStrength={5}
         resistance={750}
         returnDuration={1.5}
-      />
+      /> */}
       <section
         className="bg-white  absolute lg:grid lg:h-screen lg:place-content-center"
         style={{ width: "100%", height: "600px", position: "relative" }}
