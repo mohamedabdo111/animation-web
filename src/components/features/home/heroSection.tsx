@@ -28,7 +28,11 @@ export default function HeroSection() {
         <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
           <div className="mx-auto text-center">
             <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
-              Meet Sanad Your AI Agent for
+              Meet {" "}
+              <span className="  font-bold bg-gradient-to-r from-blue-600 via-purple-500 to-yellow-400 bg-clip-text text-transparent">
+                Sanad
+              </span>{" "}
+              Your AI Agent for
             </h1>
             <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
               <TextType
