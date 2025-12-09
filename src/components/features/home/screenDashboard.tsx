@@ -18,7 +18,12 @@ export default function ScreenDashboard() {
             delay={0.3}
 
         >
-            <div className="flex justify-center  pt-7"><img src={MRFQ_Dashboard} alt="MRFQ Dashboard" /></div></AnimatedContent>
+
+            <div className="flex justify-center  pt-10">
+                <img src={MRFQ_Dashboard} className=" transition-all duration-500" alt="MRFQ Dashboard" /></div>
+
+
+        </AnimatedContent>
 
 
     );
