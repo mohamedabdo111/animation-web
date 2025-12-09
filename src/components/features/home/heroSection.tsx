@@ -1,5 +1,6 @@
 // import DotGrid from "@/components/DotGrid";
 // import Prism from "@/components/Prism";
+import Header from "@/components/layout/header/Navbar";
 import Prism from "@/components/Prism";
 import TextType from "@/components/TextType";
 
@@ -7,6 +8,7 @@ export default function HeroSection() {
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
       {/* Background Layer */}
+      <Header />
       <div className="absolute inset-0 -z-10">
         <Prism
           animationType="rotate"
