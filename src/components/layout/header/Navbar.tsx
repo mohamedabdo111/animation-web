@@ -18,7 +18,7 @@ const Header = () => {
                 <div className="flex items-center justify-between">
                     {/* Logo - Right side in RTL */}
                     <div className="flex flex-col items-start">
-                        <img src={MRFQ_Logo} alt="MRFQ Logo" className='w-[50px] h-[50px]' />
+                        <img src={MRFQ_Logo} alt="MRFQ Logo" className='w-[60px]' />
                     </div>
 
                     {/* Navigation Links - Center */}
@@ -84,7 +84,7 @@ const Header = () => {
                 </div>
 
                 {/* Mobile Navigation */}
-                <div className="md:hidden mt-4 flex flex-col gap-3">
+                <div className="hidden mt-4 flex flex-col gap-3">
                     <a href="#about" className="text-gray-900 hover:text-blue-600 text-base">
                         حول
                     </a>
