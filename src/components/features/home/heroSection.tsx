@@ -1,7 +1,6 @@
 // import DotGrid from "@/components/DotGrid";
 // import Prism from "@/components/Prism";
 import Prism from "@/components/Prism";
-import StarBorder from "@/components/StarBorder";
 import TextType from "@/components/TextType";
 
 export default function HeroSection() {
