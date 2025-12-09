@@ -8,12 +8,13 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [language, setLanguage] = useState('Ar');
 
     return (
-        <div className="w-full bg-transparent shadow-sm fixed top-0 z-50" dir="rtl">
+        <div className="w-full bg-transparent fixed top-0 z-50" dir="rtl">
             <nav className="max-w-7xl mx-auto px-6 py-4">
                 <div className="flex items-center justify-between">
                     {/* Logo - Right side in RTL */}
@@ -74,12 +75,15 @@ const Header = () => {
                         </DropdownMenu>
 
                         {/* Login Button */}
-                        <Button
-                            variant="outline"
-                            className="rounded-full px-6 py-2 border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-all font-medium"
-                        >
-                            تسجيل الدخول
-                        </Button>
+                        <a href="https://mrfq.sa/login" target='_blank'>
+                            <Button
+                                variant="outline"
+
+                                className="rounded-full px-6 py-2 border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-all font-medium"
+                            >
+                                تسجيل الدخول
+                            </Button>
+                        </a>
                     </div>
                 </div>
 
