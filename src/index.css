@@ -118,7 +118,15 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+.prism-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
