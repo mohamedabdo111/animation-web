@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState, useMemo, useId, FC, PointerEvent } from 'react';
+import { useRef, useEffect, useState, useMemo, useId, type FC, type PointerEvent } from 'react';
 import './CurvedLoop.css';
 
 interface CurvedLoopProps {
@@ -40,8 +40,8 @@ const CurvedLoop: FC<CurvedLoopProps> = ({
   const textLength = spacing;
   const totalText = textLength
     ? Array(Math.ceil(1800 / textLength) + 2)
-        .fill(text)
-        .join('')
+      .fill(text)
+      .join('')
     : text;
   const ready = spacing > 0;
 
