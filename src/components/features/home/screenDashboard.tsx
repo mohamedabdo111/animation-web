@@ -3,7 +3,7 @@ import AnimatedContent from "@/components/AnimatedContent";
 
 export default function ScreenDashboard() {
   return (
-    <div className="py-16 flex justify-center items-center ">
+    <div className="py-16 px-4 flex justify-center items-center ">
       <AnimatedContent
         distance={150}
         direction="horizontal"

@@ -1,8 +1,8 @@
 // import DotGrid from "@/components/DotGrid";
 // import Prism from "@/components/Prism";
 import Header from "@/components/layout/header/Navbar";
-import Prism from "@/components/Prism";
 import TextType from "@/components/TextType";
+import Threads from "@/components/Threads";
 
 export default function HeroSection() {
   return (
@@ -10,7 +10,7 @@ export default function HeroSection() {
       {/* Background Layer */}
       <Header />
       <div className="absolute inset-0 -z-10">
-        <Prism
+        {/* <Prism
           animationType="rotate"
           timeScale={0.5}
           height={3.5}
@@ -20,6 +20,11 @@ export default function HeroSection() {
           colorFrequency={1}
           noise={0.5}
           glow={1}
+        /> */}
+        <Threads
+          amplitude={1}
+          distance={0}
+          enableMouseInteraction={true}
         />
       </div>
 

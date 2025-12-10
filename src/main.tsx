@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App.tsx";
 import ClickSpark from "./components/ClickSpark.tsx";
 import { ThemeProvider } from "./components/theme-providers.tsx";
+import { BrowserRouter } from "react-router-dom";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -15,7 +16,9 @@ createRoot(document.getElementById("root")!).render(
       duration={200}
     >
       <ThemeProvider>
-        <App />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
       </ThemeProvider>
     </ClickSpark>
   </StrictMode>
