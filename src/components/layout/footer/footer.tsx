@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <footer className="bg-[#0a0a0a] text-white">
             <div className="mx-auto max-w-7xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
-                <div className="grid grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                         <div className="text-teal-600">
                             <img src={MRFQLogo} alt="MRFQ Logo" />
