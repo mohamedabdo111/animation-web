@@ -3,6 +3,7 @@
 import Header from "@/components/layout/header/Navbar";
 import TextType from "@/components/TextType";
 import Threads from "@/components/Threads";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
@@ -60,15 +61,16 @@ export default function HeroSection() {
             </p>
 
             <div className="mt-4 flex justify-center gap-4 sm:mt-6">
-              <a
+              <Link
                 className="block h-full rounded-full bg-gray-800 px-5 py-2 font-medium text-white shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900"
-                href="https://meetings-eu1.hubspot.com/yalrashod"
+                to="https://meetings-eu1.hubspot.com/yalrashod"
                 target="_blank"
               >
                 Request a Demo
-              </a>
+              </Link>
 
-              <a href="#" className="block h-full rounded-full bg-gray-800 px-5 py-2 font-medium text-white shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900">Learn More</a>
+
+              <Link to="#" className="block h-full rounded-full bg-gray-800 px-5 py-2 font-medium text-white shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900">Learn More</Link>
             </div>
           </div>
         </div>

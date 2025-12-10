@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function CustomCard({
     src,
@@ -14,11 +15,11 @@ export default function CustomCard({
 
             <div className="p-4 sm:p-6">
 
-                <a href="#">
+                <Link to="#">
                     <h3 className="mt-0.5 text-lg text-gray-900 dark:text-white">
                         {title}
                     </h3>
-                </a>
+                </Link>
 
                 <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-white">
                     {description}

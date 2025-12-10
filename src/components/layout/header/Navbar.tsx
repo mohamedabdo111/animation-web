@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import MRFQ_Logo from "@/assets/layout/MRFQ_Logo.png"
 import {
@@ -9,6 +10,7 @@ import {
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { ModeToggle } from './darkTheme';
+import MobileMenu from './mobileMenu';
 
 const Header = () => {
     const [language, setLanguage] = useState('Ar');
@@ -47,34 +49,35 @@ const Header = () => {
                     {/* Navigation Links - Center */}
                     <ul className="hidden md:flex items-center gap-10">
                         <li>
-                            <a
-                                href="#about"
+                            <Link
+                                to="#about"
                                 className="text-foreground hover:text-blue-600 transition-colors text-base font-medium"
                             >
                                 حول
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#advantages"
+                            <Link
+                                to="#advantages"
                                 className="text-foreground hover:text-blue-600 transition-colors text-base font-medium"
                             >
                                 المزايا
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#contact"
+                            <Link
+                                to="#contact"
                                 className="text-foreground hover:text-blue-600 transition-colors text-base font-medium"
                             >
                                 تواصل
-                            </a>
+                            </Link>
                         </li>
                     </ul>
 
 
+
                     {/* Actions - Left side in RTL */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 justify-between">
                         {/* Language Selector */}
                         <ModeToggle />
                         <DropdownMenu>
@@ -98,31 +101,24 @@ const Header = () => {
                             </DropdownMenuContent>
                         </DropdownMenu>
 
+
                         {/* Login Button */}
-                        <a href="https://mrfq.sa/login" target='_blank'>
+                        <Link to="https://mrfq.sa/login" target='_blank'>
                             <Button
                                 variant="outline"
 
-                                className="rounded-full px-6 py-2 border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all font-medium"
+                                className="rounded-full hidden sm:block px-6 py-2 border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all font-medium"
                             >
                                 تسجيل الدخول
                             </Button>
-                        </a>
+                        </Link>
+                        <div className='md:hidden'>
+                            <MobileMenu />
+                        </div>
                     </div>
                 </div>
 
-                {/* Mobile Navigation */}
-                <div className="hidden mt-4 flex flex-col gap-3">
-                    <a href="#about" className="text-foreground hover:text-blue-600 text-base">
-                        حول
-                    </a>
-                    <a href="#advantages" className="text-foreground hover:text-blue-600 text-base">
-                        المزايا
-                    </a>
-                    <a href="#contact" className="text-foreground hover:text-blue-600 text-base">
-                        تواصل
-                    </a>
-                </div>
+
             </nav>
         </div>
     );
