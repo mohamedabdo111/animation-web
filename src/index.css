@@ -4,11 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 html {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 @theme inline {
