@@ -2,7 +2,9 @@ import { useState } from "react";
 import { ChevronDown, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import MRFQ_Logo from "@/assets/layout/MRFQ_Logo.png";
+import MRFQ_Logo_dark from "@/assets/layout/MRFQ_Logo.png";
+import MRFQ_Logo_light from "@/assets/layout/MRFQ_White_Logo.png";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,10 +13,15 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ModeToggle } from "./darkTheme";
 import MobileMenu from "./mobileMenu";
+import { useTheme } from "@/components/theme-providers";
 
 const Header = () => {
   const [language, setLanguage] = useState("Ar");
-  // const [isScrolled, setIsScrolled] = useState(false);
+
+  const { theme } = useTheme();
+
+  const logo = theme === "dark" ? MRFQ_Logo_light : MRFQ_Logo_dark;
+  // const [isScrolled, setI  sScrolled] = useState(false);
   // useEffect(() => {
   //     const handleScroll = () => {
   //         const scrolled = window.scrollY > 10;
@@ -38,7 +45,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo - Right side in RTL */}
           <div className="flex flex-col items-start">
-            <img src={MRFQ_Logo} alt="MRFQ Logo" className="w-[60px]" />
+            <img src={logo} alt="MRFQ Logo" className="w-[60px]" />
           </div>
 
           {/* Navigation Links - Center */}
