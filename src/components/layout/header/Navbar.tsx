@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronDown, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -17,24 +17,26 @@ import { useTheme } from "@/components/theme-providers";
 
 const Header = () => {
   const [language, setLanguage] = useState("Ar");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const { theme } = useTheme();
 
   const logo = theme === "dark" ? MRFQ_Logo_light : MRFQ_Logo_dark;
-  // const [isScrolled, setI  sScrolled] = useState(false);
-  // useEffect(() => {
-  //     const handleScroll = () => {
-  //         const scrolled = window.scrollY > 10;
-  //         setIsScrolled(scrolled);
-  //         console.log('Scrolled:', scrolled, 'ScrollY:', window.scrollY); // Debug log
-  //     };
-  //     window.addEventListener('scroll', handleScroll);
-  //     return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div
-      className={`w-full fixed top-0 z-50 transition-all duration-300 bg-transparent shadow-sm`}
+      className={`w-full bg-blu fixed top-0 z-50 transition-all duration-300 bg-transparent shadow-sm ${
+        isScrolled ? "bg-white/10 backdrop-blur-md shadow-lg" : "bg-transparent"
+      }`}
       // style={{
       //     backdropFilter: isScrolled ? 'none' : 'none',
       //     WebkitBackdropFilter: isScrolled ? 'none' : 'none'
