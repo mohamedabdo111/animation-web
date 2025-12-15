@@ -14,7 +14,7 @@ function WithMrfqComponent({
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <section className="grid grid-cols-2  gap-2 items-center text-black max-w-7xl mx-auto py-10 px-4 dark:text-white">
+    <section className="grid grid-cols-1 md:grid-cols-2  gap-2 items-center text-black max-w-7xl mx-auto py-10 px-4 dark:text-white">
       <div className="" data-aos="fade-up">
         <h2 className="text-5xl font-bold mb-2">{title}</h2>
         <p className="text-2xl">{description}</p>
